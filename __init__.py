@@ -17,14 +17,14 @@ else:
         url="http://localhost:3001"
     )
 
-def streamlit_ove(key=None, height=500):
+def streamlit_ove(key=None, height=1000):
     st_editorjs = _custom_component(key=key, height=height)
     return st_editorjs
 
 if not _RELEASE:
     import streamlit as st
 
-    content = streamlit_ove(key='test', height=500)
+    content = streamlit_ove(key='test')
 
     if st.button("Get data"):
         st.write(content)
